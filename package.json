@@ -6,7 +6,8 @@
   "scripts": {
     "start-project": "mkdir Codes",
     "test": "node node_modules/mocha/bin/mocha ./Back-end/test/ --recursive --exit",
-    "start": "node ./Back-end/controller/Main.js"
+    "start": "node ./Back-end/controller/Main.js",
+    "dev":"nodemon ./Back-end/controller/Main.js"
   },
   "repository": {
     "type": "git",

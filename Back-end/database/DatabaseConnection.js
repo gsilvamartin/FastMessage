@@ -14,6 +14,8 @@ module.exports = class DatabaseConnection {
         console.log('Connected to MongoDB');
       }
     } catch (ex) {
+
+      console.log('Failed to connect to MongoDB');
       throw ex;
     }
   }

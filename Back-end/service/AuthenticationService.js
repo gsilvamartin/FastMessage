@@ -29,14 +29,25 @@ module.exports = class AuthenticationService {
     try {
       let token = req.cookies.access_token;
 
+      console.log(token);
+
+      if (!token || token.split('.').length !== 3) {
+        return next(new ErrorResponse(401, 'Invalid token format.', null));
+      }
+      
+
       if (!token) throw new ErrorResponse(401, 'No token provided.', null);
 
       jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
-        if (err) throw new ErrorResponse(500, 'Failed to authenticate token.', null);
+        if (err) {
+          console.log(err);
+         return next( ErrorResponse(500, 'Failed to authenticate token.', null));
+        } 
+
 
         req.userId = decoded.id;
-
         next();
+
       });
     } catch (ex) {
       throw ex;
