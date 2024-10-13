@@ -89,7 +89,7 @@ module.exports = class CodeService {
 
         return files;
       } else {
-        throw new ErrorResponse(401, "You don't have permisson to access this code", null);
+         throw new ErrorResponse(401, "You don't have permisson to access this code", null);
       }
     } catch (ex) {
       throw ex;

@@ -61,7 +61,7 @@ function getCodeFiles() {
       
       switch (statusCode) {
         case 401:
-          $('#loginModal').modal('show');
+          window.location.href = '/un-authorized';
           break;
         case 501:
           toastr.error("You don't have permission for access this code.");

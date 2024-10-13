@@ -1,0 +1,42 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 5rem;
+    color: #00BFFF;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #00BFFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #00e1ff;
+}

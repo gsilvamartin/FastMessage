@@ -76,6 +76,15 @@ server.get('/index', (req, res) => {
   res.sendFile(path.resolve(__dirname + '/../../Front-end/index.html'));
 });
 
+
+server.get('/un-authorized', (req, res) => {
+  res.sendFile(path.resolve(__dirname + '/../../Front-end/401.html'));
+});
+
+server.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname + '/../../Front-end/404.html'));
+});
+
 /**
  * Function performed when there is a new socket connection.
  *

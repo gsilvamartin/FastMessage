@@ -10,8 +10,12 @@ module.exports = class DatabaseConnection {
     try {
       if (!mongoose.connection.readyState) {
         await mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+
+        console.log('Connected to MongoDB');
       }
     } catch (ex) {
+
+      console.log('Failed to connect to MongoDB');
       throw ex;
     }
   }
